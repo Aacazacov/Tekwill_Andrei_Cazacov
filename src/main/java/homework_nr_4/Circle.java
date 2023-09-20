@@ -2,30 +2,22 @@ package homework_nr_4;
 
 public class Circle {
 
-    int circleRadius;
+    static int radius;
 
-    public Circle(int circleRadius) {
-        this.circleRadius = circleRadius;
+    public Circle(int radius) {
+        this.radius = radius;
     }
-
     public static void main(String[] args) {
 
-        int radius = 7;
-        int radius2 = 6;
+    Circle C1 = new Circle(radius);
 
-        System.out.print("area of a circle when radius is " + radius);
-        System.out.println(" = " + calculateArea(radius));
-        System.out.println("----------------");
+    C1.calculateArea(7);
 
-        Circle AreaOfCircle = new Circle(radius2);
-        System.out.println("Radius is : " + AreaOfCircle.circleRadius);
-        System.out.println("----------------");
+    System.out.println("----------------");
 
-        Circle.calculateArea(radius2);
-        System.out.println("area is : " + calculateArea(radius2));
+    C1.calculateArea(6);
     }
-
-    public static float calculateArea(int radius) {
-        return (float) Math.PI * radius * radius;
+    public static void calculateArea(int radius) {
+        System.out.println("area of a circle when radius is " + radius + " = " + (Math.PI * radius * radius));
     }
 }
